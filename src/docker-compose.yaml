@@ -11,4 +11,4 @@ services:
   test-runner:
     build:
       context: .
-      dockerfile: YOUR-IMPLEMENTATION.Tests/Dockerfile
+      dockerfile: Test-Runner.Dockerfile
