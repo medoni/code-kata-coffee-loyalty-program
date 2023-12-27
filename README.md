@@ -1,4 +1,4 @@
-# code-kata-coffee-loyalty-program
+# Code kata loyality program coffee shop
 Code kata to implement a loyality program for a coffee shop.
 
 ## Goal
