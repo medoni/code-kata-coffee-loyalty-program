@@ -1,0 +1,18 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+indent_size = 4
+indent_style = space
+
+[*.json]
+indent_size = 4
+indent_style = space
+
+# YAML config files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+end_of_line = lf

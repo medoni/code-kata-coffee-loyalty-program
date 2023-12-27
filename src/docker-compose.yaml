@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  service:
+    build:
+      context: .
+      dockerfile: YOUR-IMPLEMENTATION/Dockerfile
+    ports:
+      - "8000:8000"
+
+  test-runner:
+    build:
+      context: .
+      dockerfile: YOUR-IMPLEMENTATION.Tests/Dockerfile
