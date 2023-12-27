@@ -1,4 +1,4 @@
-# Code kata loyality program coffee shop
+# Loyality program coffee shop (Code Kata)
 Code kata to implement a loyality program for a coffee shop.
 
 ## Goal
@@ -33,6 +33,12 @@ If the customer reaches six stamps upon adding a new stamp, the application shou
   - All methods have a maximum of three lines of code.
   - All classes have a maximum of two fields (excluding data classes and POJOs).
   - All classes have a maximum of ten lines of code (excluding imports).
+
+## HowTo contribute
+1) Fork
+2) Create a new branch `{LANG}/{YOURNAME}`. For example `kotlin/medoni`
+3) Implement
+4) Create a pull requests
 
 ## References
 - [Medium: The best code kata ever (Miguel Pimenta)](https://medium.com/@migpimenta/the-best-code-kata-ever-61722511ebc)
