@@ -1,7 +1,7 @@
 ﻿using ArchUnitNET.Domain;
 using ArchUnitNET.Domain.Extensions;
 
-namespace ArchitectureTests.Rules;
+namespace Shared.ArchUnitTesting.Rules;
 internal static class ClassHaveFixtureRule
 {
     public static IType? GetFixtureTypeFromClass(

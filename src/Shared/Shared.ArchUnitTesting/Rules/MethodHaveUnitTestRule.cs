@@ -1,13 +1,16 @@
-﻿using ArchitectureTests.Rules;
-using ArchUnitNET.Domain;
+﻿using ArchUnitNET.Domain;
 using ArchUnitNET.Domain.Extensions;
 using ArchUnitNET.Fluent;
 using ArchUnitNET.Fluent.Conditions;
 using ArchUnitNET.Fluent.Syntax.Elements.Members.MethodMembers;
+using Shared.ArchUnitTesting.Rules;
 using System.Text.RegularExpressions;
 
 public static class HaveUnitTestRuleExtensionMethods
 {
+    /// <summary>
+    /// Checks that the given methods have public unit tests
+    /// </summary>
     public static IArchRule HaveUnitTest(
         this MethodMembersShould should,
         IObjectProvider<Class> unitTestClasses,

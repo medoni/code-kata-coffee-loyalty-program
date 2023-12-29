@@ -26,10 +26,15 @@ public class HaveUnitTestRuleExtensionMethodsFixture
             .That()
             .AreNestedIn(typeof(HaveUnitTestRuleExtensionMethodsFixture));
 
+        var fixtureClasses = Classes()
+            .That()
+            .HaveNameEndingWith("Fixture");
+
         var publicMethods = MethodMembers()
             .That()
             .ArePublic().And()
             .AreDeclaredIn(testClasses).And()
+            .AreNotDeclaredIn(fixtureClasses).And()
             .AreNoConstructors()
             .As("Public methods");
 
@@ -41,10 +46,11 @@ public class HaveUnitTestRuleExtensionMethodsFixture
 
         // assert
         Assert.That(
-            result.Select(x => (x.EvaluatedObject, x.Passed)),
+            result.Select(x => (((dynamic)x.EvaluatedObject).Name, x.Passed)),
             Is.EquivalentTo(new[]
             {
-                ("System.Void Shared.ArchUnitTesting.UnitTests.Rules.HaveUnitTestRuleExtensionMethodsFixture/ServiceClassWithUnitTests::PublicServiceMethodWithTest()", true)
+                ("PublicServiceMethodWithTest()", true),
+                ("PublicServiceMethodWithoutTest()", false)
             })
         );
     }
@@ -52,7 +58,7 @@ public class HaveUnitTestRuleExtensionMethodsFixture
     public class ServiceClassWithUnitTests
     {
         public void PublicServiceMethodWithTest() { }
-        public void PublicSericeMethodWithoutTest() { }
+        public void PublicServiceMethodWithoutTest() { }
         private void PrivateServiceMethod() { }
     }
 
