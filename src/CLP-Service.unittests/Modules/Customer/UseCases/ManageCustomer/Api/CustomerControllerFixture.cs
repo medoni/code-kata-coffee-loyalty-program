@@ -37,7 +37,7 @@ public class CustomerControllerFixture
     }
 
     [Test]
-    public void Create_Should_Invoke_Correct_Service()
+    public void CreateAsync_Should_Invoke_Correct_Service()
     {
         // arrange
 
