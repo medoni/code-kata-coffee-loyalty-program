@@ -20,7 +20,7 @@ public class StampPaymentController
     /// <response code="201">Returns information about the paid stamp</response>
     /// <response code="500">Internal Server Error occurred.</response>
     [HttpPost]
-    public CoffeeStampPaidDto PayStamp([FromBody] PayCoffeeStampDto dto)
+    public Task<CoffeeStampPaidDto> PayStampAsync([FromBody] PayCoffeeStampDto dto)
     {
         throw new NotImplementedException();
     }

@@ -24,7 +24,7 @@ public class CustomerController : ControllerBase
     [ProducesResponseType<CustomerDto>(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public CustomerDto Get(string customerId)
+    public Task<CustomerDto> GetAsync(string customerId)
     {
         throw new NotImplementedException();
     }
@@ -37,7 +37,7 @@ public class CustomerController : ControllerBase
     [HttpGet]
     [ProducesResponseType<CustomerDto[]>(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public IEnumerable<CustomerDto> GetAll()
+    public Task<IEnumerable<CustomerDto>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
@@ -50,7 +50,7 @@ public class CustomerController : ControllerBase
     [HttpPost]
     [ProducesResponseType<CustomerCreatedDto>(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public CustomerCreatedDto Post(
+    public Task<CustomerCreatedDto> CreateAsync(
         [FromBody] CreateCustomerDto createDto
     )
     {

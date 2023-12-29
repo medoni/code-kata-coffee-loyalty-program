@@ -27,7 +27,7 @@ public class CoffeeOrderingController
     /// </response>
     /// <response code="500">Internal Server Error occurred.</response>
     [HttpPost("order")]
-    public BrewedCoffeeDto Post([FromBody] OrderCoffeeDto createDto)
+    public Task<BrewedCoffeeDto> OrderAsync([FromBody] OrderCoffeeDto createDto)
     {
         throw new NotImplementedException();
     }

@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLP-Service.integrationtest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLP-Service.unittests", "CLP-Service.unittests\CLP-Service.unittests.csproj", "{5F2D321D-A7BA-480B-BB01-3DB03751C405}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8EF12BA3-419B-4B8C-9C0F-342303180A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Testing", "Shared\Shared.Testing\Shared.Testing.csproj", "{DDCE29A0-6145-4D05-9543-FADD5402B569}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,18 @@ Global
 		{5F2D321D-A7BA-480B-BB01-3DB03751C405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F2D321D-A7BA-480B-BB01-3DB03751C405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F2D321D-A7BA-480B-BB01-3DB03751C405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCE29A0-6145-4D05-9543-FADD5402B569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCE29A0-6145-4D05-9543-FADD5402B569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCE29A0-6145-4D05-9543-FADD5402B569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCE29A0-6145-4D05-9543-FADD5402B569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDCE29A0-6145-4D05-9543-FADD5402B569} = {8EF12BA3-419B-4B8C-9C0F-342303180A4E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {362CCF6E-B0EE-461E-B37A-D9ABF49C9F1F}
 	EndGlobalSection
 EndGlobal

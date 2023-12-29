@@ -6,6 +6,7 @@ COPY Code-Kata-CLP.sln .
 COPY CLP-Service/CLP-Service.csproj ./CLP-Service/
 COPY CLP-Service.integrationtests/CLP-Service.integrationtests.csproj ./CLP-Service.integrationtests/
 COPY CLP-Service.unittests/CLP-Service.unittests.csproj ./CLP-Service.unittests/
+COPY Shared/Shared.Testing/Shared.Testing.csproj ./Shared/Shared.Testing/
 RUN dotnet restore Code-Kata-CLP.sln
 
 COPY . .

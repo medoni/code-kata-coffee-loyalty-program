@@ -20,7 +20,7 @@ public class CoffeeStampController : ControllerBase
     /// <response code="200">Returns the stamps.</response>
     /// <response code="500">Internal Server Error occurred.</response>
     [HttpGet]
-    public List<CoffeeStampDto> Get(string customerId)
+    public Task<List<CoffeeStampDto>> GetByCustomerAsync(string customerId)
     {
         throw new NotImplementedException();
     }
@@ -33,7 +33,7 @@ public class CoffeeStampController : ControllerBase
     /// <response code="404">Stamp was not found</response>
     /// <response code="500">Internal Server Error occurred.</response>
     [HttpGet("{stampId}")]
-    public CoffeeStampDto StampDto(string stampId)
+    public Task<CoffeeStampDto> GetAsync(string stampId)
     {
         throw new NotImplementedException();
     }
@@ -45,7 +45,7 @@ public class CoffeeStampController : ControllerBase
     /// <response code="201">Returns the created stamp.</response>
     /// <response code="500">Internal Server Error occurred.</response>
     [HttpPost]
-    public CoffeeStampCreatedDto Post([FromBody] CreateCoffeeStampDto createDto)
+    public Task<CoffeeStampCreatedDto> CreateAsync([FromBody] CreateCoffeeStampDto createDto)
     {
         throw new NotImplementedException();
     }
